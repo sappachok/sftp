@@ -106,6 +106,7 @@ if [ -n "$dir" ]; then
             log "Creating directory: $dirPath"
             mkdir -p "$dirPath"
             chown -R "$uid:users" "$dirPath"
+	    ln -s "/home/public_html" "$dirPath/public_html"
         else
             log "Directory already exists: $dirPath"
         fi

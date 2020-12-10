@@ -29,6 +29,8 @@ if [ ! -f "$userConfPath" ] && [ -f "$userConfPathLegacy" ]; then
     ln -s "$userConfPathLegacy" "$userConfPath"
 fi
 
+mkdir -p "/home/public_html"
+
 # Create users only on first run
 if [ ! -f "$userConfFinalPath" ]; then
     mkdir -p "$(dirname $userConfFinalPath)"
