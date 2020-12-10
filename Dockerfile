@@ -17,5 +17,6 @@ COPY files/entrypoint /
 
 EXPOSE 22
 
+RUN ["chmod", "+x", "/usr/local/bin/create-sftp-user"]
 RUN ["chmod", "+x", "/entrypoint"]
 ENTRYPOINT ["/entrypoint"]
