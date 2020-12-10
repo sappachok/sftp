@@ -30,6 +30,7 @@ if [ ! -f "$userConfPath" ] && [ -f "$userConfPathLegacy" ]; then
 fi
 
 mkdir -p "/home/public_html"
+chown root:root "/home/public_html"
 
 # Create users only on first run
 if [ ! -f "$userConfFinalPath" ]; then
