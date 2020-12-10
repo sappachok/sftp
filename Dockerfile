@@ -17,4 +17,5 @@ COPY files/entrypoint /
 
 EXPOSE 22
 
+RUN ["chmod", "+x", "/entrypoint"]
 ENTRYPOINT ["/entrypoint"]
